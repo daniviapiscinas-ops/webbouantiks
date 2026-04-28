@@ -97,3 +97,11 @@ service firebase.storage {
   }
 }
 ```
+
+
+## Cambios v2
+
+- Enlace `Admin` añadido al menú principal y al menú móvil.
+- Las colecciones ya tienen imágenes reales de portada por defecto.
+- Las piezas destacadas también muestran imágenes en vez de iconos.
+- Cuando conectes Firebase, podrás sustituir estas imágenes desde `admin.html`.

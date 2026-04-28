@@ -23,10 +23,10 @@ const defaults = {
     hours: "Atención bajo cita previa"
   },
   collections: [
-    { id: "arte", title: "Arte", description: "Pinturas, esculturas, grabados y obras con carácter propio.", emoji: "🖼️", cover: "" },
-    { id: "muebles", title: "Muebles", description: "Piezas de ebanistería, mobiliario singular y objetos decorativos.", emoji: "🪑", cover: "" },
-    { id: "iluminacion", title: "Iluminación", description: "Lámparas, arañas, apliques y piezas restauradas de colección.", emoji: "🕯️", cover: "" },
-    { id: "libros", title: "Libros", description: "Volúmenes antiguos, primeras ediciones, grabados y colecciones.", emoji: "📚", cover: "" }
+    { id: "arte", title: "Arte", description: "Pinturas, esculturas, grabados y obras con carácter propio.", emoji: "🖼️", cover: "https://images.unsplash.com/photo-1577083288073-40892c0860a4?auto=format&fit=crop&w=1200&q=80" },
+    { id: "muebles", title: "Muebles", description: "Piezas de ebanistería, mobiliario singular y objetos decorativos.", emoji: "🪑", cover: "https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=1200&q=80" },
+    { id: "iluminacion", title: "Iluminación", description: "Lámparas, arañas, apliques y piezas restauradas de colección.", emoji: "🕯️", cover: "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=1200&q=80" },
+    { id: "libros", title: "Libros", description: "Volúmenes antiguos, primeras ediciones, grabados y colecciones.", emoji: "📚", cover: "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=1200&q=80" }
   ]
 };
 
