@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin — Bou Antiks</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="admin-body">
+  <div class="admin-shell">
+    <h1 style="font-size:2.4rem">Panel Admin</h1>
+    <p class="notice">Antes de usarlo, completa tus datos en <strong>firebase-config.js</strong> y activa Authentication, Firestore y Storage en Firebase.</p>
+
+    <section id="loginBox" style="padding:20px 0">
+      <h2>Acceso</h2>
+      <form id="loginForm">
+        <div class="field"><label>Email</label><input id="loginEmail" type="email" required></div>
+        <div class="field"><label>Contraseña</label><input id="loginPass" type="password" required></div>
+        <button class="btn btn-primary" type="submit">Entrar</button>
+      </form>
+    </section>
+
+    <section id="adminBox" style="display:none;padding:20px 0">
+      <button class="btn btn-secondary" id="logoutBtn" type="button">Cerrar sesión</button>
+
+      <h2 style="margin-top:26px">Datos generales</h2>
+      <form id="siteForm" class="admin-grid">
+        <div>
+          <div class="field"><label>Marca</label><input id="brand" placeholder="Bou Antiks"></div>
+          <div class="field"><label>Subtítulo</label><input id="subtitle" placeholder="Antigüedades"></div>
+          <div class="field"><label>Título principal</label><input id="headline" placeholder="Bou Antiks"></div>
+          <div class="field"><label>Subtítulo principal</label><input id="heroSubtitle" placeholder="Antigüedades"></div>
+          <div class="field"><label>Frase principal</label><textarea id="tagline"></textarea></div>
+        </div>
+        <div>
+          <div class="field"><label>Email</label><input id="email" placeholder="desirevintageshop@gmail.com"></div>
+          <div class="field"><label>Teléfono visible</label><input id="phone" placeholder="+34 630 36 77 15"></div>
+          <div class="field"><label>WhatsApp sin espacios ni +</label><input id="whatsapp" placeholder="34630367715"></div>
+          <div class="field"><label>Dirección</label><input id="address"></div>
+          <div class="field"><label>Horario</label><input id="hours"></div>
+          <div class="field"><label>Logo</label><input id="logo" type="file" accept="image/*"></div>
+        </div>
+        <button class="btn btn-primary" type="submit">Guardar datos generales</button>
+      </form>
+
+      <h2 style="margin-top:34px">Colecciones</h2>
+      <form id="collectionForm" class="admin-grid">
+        <div>
+          <div class="field"><label>ID de colección</label><input id="collectionId" placeholder="arte" required></div>
+          <div class="field"><label>Título</label><input id="collectionTitle" required></div>
+          <div class="field"><label>Emoji opcional</label><input id="collectionEmoji" placeholder="🖼️"></div>
+        </div>
+        <div>
+          <div class="field"><label>Descripción</label><textarea id="collectionDescription"></textarea></div>
+          <div class="field"><label>Orden</label><input id="collectionOrder" type="number" value="0"></div>
+          <div class="field"><label>Foto portada</label><input id="collectionCover" type="file" accept="image/*"></div>
+        </div>
+        <button class="btn btn-primary" type="submit">Guardar colección</button>
+      </form>
+      <div id="collectionsList" class="admin-list"></div>
+
+      <h2 style="margin-top:34px">Añadir fotos a galerías</h2>
+      <form id="galleryForm" class="admin-grid">
+        <div>
+          <div class="field"><label>Colección</label><select id="galleryCollection" required></select></div>
+          <div class="field"><label>Título foto</label><input id="galleryTitle"></div>
+          <div class="field"><label>Orden</label><input id="galleryOrder" type="number" value="0"></div>
+        </div>
+        <div>
+          <div class="field"><label>Descripción</label><textarea id="galleryDescription"></textarea></div>
+          <div class="field"><label>Imagen</label><input id="galleryImage" type="file" accept="image/*" required></div>
+        </div>
+        <button class="btn btn-primary" type="submit">Subir foto</button>
+      </form>
+    </section>
+  </div>
+
+  <script type="module" src="admin.js"></script>
+</body>
+</html>
